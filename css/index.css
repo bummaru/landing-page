@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+body {
+   background-color: #ecf5f6;
+   background: #ecf5f6;
+}
+
+body {
+   font-family: "";
+   color: #212529;
+   position: relative;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.btn {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   border-radius: 0;
+}
+
+.btn:focus {
+   outline: none;
+   box-shadow: none;
+}
+
+input,
+button,
+a {
+   outline: none !important;
+}
+
+input {
+   -webkit-appearance: none;
+   border-radius: 0;
+   -webkit-border-radius: 0;
+}
+
+p {
+   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: 1em;
+   padding: 0;
+   margin: 0;
+}
+
+a {
+   display: inline-block;
+   text-decoration: none;
+}
+
+ul,
+ul li {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+hr {
+   opacity: 1;
+   color: #ddd;
+}
+
+.wrap {
+   overflow: hidden;
+}
+.col-text {
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: flex-start;
+}
+section {
+   min-height: 900px;
+}
+.sec-white {
+   background-color: white;
+}
+
+/* section1 */
+
+section.sec1 {
+   min-height: 1080px;
+   background: url(../image/sec1-bak.svg) no-repeat;
+}
+
+/* section2 */
+
+section.sec2 {
+}
+
+section.sec2 h2::before {
+   content: "❝";
+}
+section.sec2 h2::after {
+   content: "❞";
+}
+
+/* section3 */
+
+section.sec3 {
+}
+
+/* section4 */
+
+section.sec4 {
+}
+
+/* section5 */
+
+section.sec5 {
+}
+
+/* section6 */
+
+section.sec6 {
+}
+
+/* section7 */
+
+section.sec7 {
+}
+
+section.sec7 .multiply {
+   padding: 0 2rem;
+}
+section.sec7 .multiply img {
+   width: 60px;
+   height: 60px;
+}
+
+/* footer */
+
+footer.footer {
+   background-color: #eee;
+}
+
+footer.footer .row > article:first-of-type {
+   border-right: 2px solid #ccc;
+}
