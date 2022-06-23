@@ -15,6 +15,21 @@ body {
    user-select: none;
 }
 
+body::-webkit-scrollbar {
+   width: 8px;
+   height: 8px;
+   background: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+   border-radius: 4px;
+   background-color: #289ca4;
+}
+
+body::-webkit-scrollbar-track {
+   background: #ffffff;
+}
+
 .btn {
    padding: 0;
    margin: 0;
@@ -81,10 +96,19 @@ hr {
    align-items: flex-start;
 }
 section {
-   min-height: 900px;
+   min-height: 1000px;
 }
 .sec-white {
    background-color: white;
+}
+section .row {
+   max-width: 1440px;
+   margin: 0 auto;
+   justify-content: space-between;
+}
+
+section h2 {
+   font-size: 2.6em;
 }
 
 /* section1 */
@@ -92,6 +116,35 @@ section {
 section.sec1 {
    min-height: 1080px;
    background: url(../image/sec1-bak.svg) no-repeat;
+}
+
+/* sec-mov */
+
+section.sec-mov {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+section.sec-mov .container {
+   max-width: 1000px;
+}
+
+section.sec-mov .mov-wrap {
+   position: relative;
+   width: 100%;
+   height: 0;
+   padding-bottom: 56.25%;
+}
+
+section.sec-mov .mov-wrap iframe {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   width: 100%;
+   height: 100%;
 }
 
 /* section2 */
@@ -104,6 +157,25 @@ section.sec2 h2::before {
 }
 section.sec2 h2::after {
    content: "❞";
+}
+section.sec2 .row .text-center > img {
+   max-width: 90%;
+   height: auto;
+}
+
+section.sec2 .row .col-text ul {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+section.sec2 .row .col-text ul li {
+   width: 50%;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items: center;
 }
 
 /* section3 */
@@ -131,6 +203,13 @@ section.sec6 {
 section.sec7 {
 }
 
+section.sec7 .tit {
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+}
+
 section.sec7 .multiply {
    padding: 0 2rem;
 }
@@ -147,4 +226,16 @@ footer.footer {
 
 footer.footer .row > article:first-of-type {
    border-right: 2px solid #ccc;
+}
+
+@media (max-width: 1440px) {
+   section .row {
+      max-width: 1280px;
+   }
+}
+
+@media (max-width: 1280px) {
+   section .row {
+      max-width: 1000px;
+   }
 }
