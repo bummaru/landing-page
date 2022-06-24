@@ -144,6 +144,7 @@
                </article>
             </div>
          </section>
+         <div class="bak-tri1"></div>
          <section class="section sec4">
             <div class="row">
                <article class="col-lg-6 text-center">
@@ -159,6 +160,7 @@
                </article>
             </div>
          </section>
+         <div class="bak-tri2"></div>
          <section class="section sec5">
             <div class="row">
                <article class="col-lg-5 col-text">
@@ -174,6 +176,7 @@
                </article>
             </div>
          </section>
+         <div class="bak-tri3"></div>
          <section class="section sec6 sec-white">
             <div class="row">
                <article class="col-lg-5">
@@ -196,7 +199,7 @@
                </article>
             </div>
          </section>
-         <div class="bak-ch sec-white text-center">
+         <div class="bak-ch text-center sec-white">
             <img src="image/sec6-bak2.png" alt="" />
          </div>
          <section class="section sec7 sec-white">
@@ -266,6 +269,9 @@
                <p class="copyright">copyright ©2022 by BUMGORAEMARU, inc. all rights reserved</p>
             </div>
          </footer>
+         <button id="topMove" class="btn top-move" role="button">
+            <i class="fas fa-arrow-circle-up"></i>
+         </button>
       </div>
 
       <!-- jquery -->
@@ -277,10 +283,41 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
       <!-- animate -->
       <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <!-- emailjs -->
+      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
       <!-- other -->
       <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript" src="js/contactUs.js"></script>
+
       <script>
          AOS.init();
+
+         (function () {
+            emailjs.init("user_1vlADkCQ6gHFGoNl4Emrj");
+         })();
+
+         $("#submit").click(function () {
+            if ($("#Name").val().length == 0) {
+               alert("이름을 입력하세요.");
+               $("#Name").focus();
+               return false;
+            }
+            if ($("#Tel").val().length == 0) {
+               alert("전화번호를 입력하세요. (-없이 숫자만 입력)");
+               $("#Tel").focus();
+               return false;
+            }
+            if ($("#Email").val().length == 0) {
+               alert("이메일을 입력하세요.");
+               $("#Email").focus();
+               return false;
+            }
+            if ($("#Message").val().length == 0) {
+               alert("메세지를 입력하세요.");
+               $("#Message").focus();
+               return false;
+            }
+         });
       </script>
    </body>
 </html>

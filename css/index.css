@@ -104,7 +104,9 @@ hr {
 }
 
 .wrap {
+   max-width: 1920px;
    overflow: hidden;
+   margin: 0 auto;
 }
 .col-text {
    display: flex;
@@ -113,9 +115,8 @@ hr {
    align-items: flex-start;
 }
 section {
-   min-height: 1000px;
+   min-height: 900px;
    display: flex;
-   justify-content: space-between;
    align-items: center;
 }
 .sec-white {
@@ -147,6 +148,50 @@ section .col-text p {
    line-height: 2.6rem;
 }
 
+.bak-tri1 {
+   width: 0px;
+   height: 0px;
+   border-top: 100px solid #b3e0e2;
+   border-left: 0px solid transparent;
+   border-right: 1920px solid transparent;
+}
+
+.bak-tri2 {
+   width: 0px;
+   height: 0px;
+   border-bottom: 100px solid #b3e0e2;
+   border-left: 1920px solid transparent;
+   border-right: 0px solid transparent;
+}
+
+.bak-tri3 {
+   background-color: white;
+   width: 0px;
+   height: 0px;
+   border-top: 100px solid #b3e0e2;
+   border-left: 0px solid transparent;
+   border-right: 1920px solid transparent;
+}
+
+.top-move {
+   position: fixed;
+   top: 50%;
+   right: 6px;
+   background: transparent;
+   margin: 0;
+   padding: 0;
+   border: none;
+   display: none;
+   font-size: 1.4rem;
+   color: #289ca4;
+   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+   -webkit-text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+   z-index: 30;
+}
+.top-move:focus {
+   outline: none;
+}
+
 /* section1 */
 
 section.sec1 {
@@ -172,7 +217,7 @@ section.sec1 h1 {
 section.sec1 p {
    color: white;
    font-size: 1.3rem;
-   line-height: 1.6rem;
+   line-height: 2rem;
    font-weight: 500;
    margin: 2rem 0 3rem;
 }
@@ -210,7 +255,7 @@ section.sec-mov {
 }
 
 section.sec-mov .container {
-   max-width: 1000px;
+   max-width: 900px;
 }
 
 section.sec-mov .mov-wrap {
@@ -245,23 +290,23 @@ section.sec2 h2 {
    color: #212529;
    font-family: "SuncheonB";
    font-weight: bold;
-   font-size: 2.3rem;
+   font-size: 2.4rem;
    letter-spacing: -1px;
    line-height: 3.5rem;
 }
 section.sec2 h2::before {
-   content: "❝";
-   font-size: 3.5rem;
+   content: "“";
+   font-size: 3.2rem;
    font-weight: normal;
 }
 section.sec2 h2::after {
-   content: "❞";
-   font-size: 3.5rem;
+   content: "”";
+   font-size: 3.2rem;
    font-weight: normal;
 }
 section.sec2 h2 span {
    font-size: 3rem;
-   padding-left: 2.4rem;
+   padding-left: 2rem;
    color: #289ca4;
 }
 section.sec2 .col-text > p {
@@ -345,6 +390,7 @@ section.sec6 {
 section.sec6 h2 {
    color: #212529;
    line-height: 4rem;
+   margin-top: 2rem;
    margin-left: 1rem;
 }
 section.sec6 h2 span {
@@ -353,7 +399,7 @@ section.sec6 h2 span {
 section.sec6 h4 {
    font-size: 2rem;
    font-weight: 400;
-   margin-bottom: 1.5rem;
+   margin: 1.5rem 0;
 }
 section.sec6 h4 span {
    font-size: 2.8rem;
@@ -364,12 +410,16 @@ section.sec6 p {
    margin: 0;
    padding: 0;
    margin-bottom: 1.5rem;
+   font-weight: 300;
+}
+section.sec6 p:last-of-type {
+   margin-bottom: 0;
 }
 
 /* section7 */
 
 section.sec7 {
-   min-height: 1400px;
+   min-height: 1200px;
    flex-flow: column nowrap;
    justify-content: center;
 }
@@ -446,6 +496,10 @@ section.sec7 form textarea::-webkit-scrollbar-track {
 section.sec7 form input[type="submit"] {
    background-color: #289ca4;
    color: white;
+   font-size: 1.4em;
+   letter-spacing: 3px;
+   font-weight: 700;
+   border-radius: 30px;
 }
 
 /* footer */
