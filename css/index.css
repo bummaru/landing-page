@@ -103,6 +103,10 @@ hr {
    color: #ddd;
 }
 
+img {
+   image-rendering: -webkit-optimize-contrast;
+}
+
 .wrap {
    max-width: 1920px;
    overflow: hidden;
@@ -133,12 +137,12 @@ section h2 {
    font-weight: bold;
    font-size: 2.8rem;
    color: #289ca4;
-   padding: 0 3rem 0.3rem 1.2rem;
 }
 
 section h2.bak-h2 {
+   padding: 0.5rem 2rem 0.5rem 1rem;
    background: url(../image/tit-bak.png) no-repeat;
-   background-size: 100% 70%;
+   background-size: 100% 60%;
    background-position: left bottom;
 }
 
@@ -160,8 +164,8 @@ section .col-text p {
    width: 0px;
    height: 0px;
    border-bottom: 100px solid #b3e0e2;
-   border-left: 1920px solid transparent;
-   border-right: 0px solid transparent;
+   border-left: 0px solid transparent;
+   border-right: 1920px solid transparent;
 }
 
 .bak-tri3 {
@@ -208,6 +212,7 @@ section.sec1 .row {
 }
 
 section.sec1 .text-center img {
+   image-rendering: -webkit-optimize-contrast;
    width: 100%;
 }
 
@@ -283,6 +288,7 @@ section.sec2 {
 }
 
 section.sec2 .img-wrap > img {
+   image-rendering: -webkit-optimize-contrast;
    max-width: 90%;
    height: auto;
 }
@@ -417,6 +423,10 @@ section.sec6 p:last-of-type {
    margin-bottom: 0;
 }
 
+section.sec6 .col-lg-5 img {
+   max-width: 500px;
+}
+
 /* section7 */
 
 section.sec7 {
@@ -448,6 +458,7 @@ section.sec7 .multiply {
    padding: 0 2rem;
 }
 section.sec7 .multiply img {
+   image-rendering: -webkit-optimize-contrast;
    width: 60px;
    height: 60px;
 }
@@ -503,6 +514,12 @@ section.sec7 form input[type="submit"] {
    border-radius: 30px;
 }
 
+section.sec7 .text-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 /* footer */
 
 footer.footer {
@@ -538,15 +555,20 @@ footer.footer .footer-text a:hover {
    transition: 0.3s;
    color: #999;
 }
-
 footer.footer .row > article:last-of-type {
    border-left: 2px solid #ccc;
    padding-left: 3rem;
 }
-
+footer.footer b {
+   font-weight: normal;
+}
 footer.footer .copyright {
    margin-top: 7rem;
    text-align: center;
+}
+
+footer.footer .download img {
+   width: 160px;
 }
 
 @media (max-width: 1440px) {
@@ -644,26 +666,299 @@ footer.footer .copyright {
    section.sec5 .text-center img {
       width: 80%;
    }
+   footer.footer .row > article:last-of-type {
+      padding-left: 1.5rem;
+   }
 }
 
 @media (max-width: 991px) {
-   .col-text {
-      justify-content: center;
-      align-items: center;
+   section,
+   section.sec2 {
+      min-height: unset;
+      max-height: unset;
    }
-
-   .col-text > * {
-      text-align: center;
+   section.sec-mov {
+      min-height: unset;
+      height: 70vh;
    }
-
+   section h2 {
+      font-size: 2rem;
+   }
+   section .col-text p {
+      font-size: 1rem;
+   }
    section.sec1 .text-center {
       display: none;
    }
    section.sec1 .row {
       width: 90%;
    }
-
-   section.sec2 .img-wrap > img {
+   section.sec2 h2 {
+      margin-top: 3rem;
+   }
+   section.sec2 .col-text {
+      justify-content: center;
+      align-items: center;
+   }
+   section.sec2 .col-text > * {
+      text-align: center;
+   }
+   section.sec2 .col-text > p {
+      margin-left: 0;
+      width: 100%;
       max-width: 500px;
+   }
+   section.sec2 .img-wrap {
+      text-align: center;
+   }
+   section.sec2 .img-wrap > img {
+      width: 90%;
+      max-width: 450px;
+      display: inline-block;
+   }
+   section.sec2 ul.icon-list {
+      text-align: left;
+      width: 100%;
+      max-width: 500px;
+   }
+   section.sec2 ul.icon-list li h3 {
+      margin-left: 0.5rem;
+   }
+
+   section.sec3 .row,
+   section.sec4 .row,
+   section.sec5 .row {
+      width: 95%;
+   }
+   section.sec3 .row,
+   section.sec5 .row {
+      flex-flow: column-reverse;
+   }
+   section.sec3,
+   section.sec4,
+   section.sec5 {
+      background-size: 35%;
+   }
+   section.sec3 .text-center,
+   section.sec4 .text-center,
+   section.sec5 .text-center {
+      padding: 5rem 0 2rem;
+   }
+   section.sec3 .text-center img {
+      width: 80%;
+   }
+   section.sec4 .text-center img,
+   section.sec5 .text-center img {
+      width: 70%;
+   }
+   section.sec4 .col-text {
+      padding-bottom: 4rem;
+   }
+   .bak-tri1,
+   .bak-tri2,
+   .bak-tri3 {
+      border-right: 1000px solid transparent;
+   }
+
+   section.sec6 {
+      padding: 6rem 0 3rem;
+   }
+   section.sec6 h2 {
+      padding: 1rem 0 3rem;
+      margin: 0;
+      text-align: center;
+   }
+   section.sec6 .col-text {
+      width: 90%;
+      margin: 0 auto;
+   }
+   section.sec6 .col-lg-5 {
+      display: inline-block;
+      text-align: center;
+   }
+   .bak-ch img {
+      width: 90%;
+   }
+
+   section.sec7 {
+      min-height: unset;
+      padding: 6rem 0;
+   }
+
+   section.sec7 .tit {
+      margin-bottom: 2rem;
+      width: 90%;
+   }
+   section.sec7 .tit h3 {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+   }
+   section.sec7 .tit h3 i {
+      display: inline-block;
+      text-align: center;
+      margin: 0.5rem 0;
+   }
+   section.sec7 .tit h3 i:nth-of-type(1) img,
+   section.sec7 .tit h3 i:nth-of-type(3) img {
+      width: 60%;
+   }
+   section.sec7 .multiply img {
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+   }
+   section.sec7 .tit p {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6rem;
+   }
+   section.sec7 form {
+      width: 100%;
+   }
+   section.sec7 form input,
+   section.sec7 form textarea {
+      font-size: 1.1rem;
+      padding: 0.5rem 0.5rem 0.4rem;
+   }
+   section.sec7 form input[type="submit"] {
+      font-size: 1.2rem;
+   }
+   section.sec7 .text-center {
+      display: none;
+   }
+   footer.footer .row > article:last-of-type {
+      border: none;
+      padding: 0;
+      padding-left: 1rem;
+      margin: 2rem 0;
+   }
+   footer.footer .footer-text p,
+   footer.footer .footer-text a {
+      display: inline;
+      line-height: 2.2rem;
+      font-size: 1rem;
+   }
+   footer.footer .copyright {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+   }
+}
+
+@media (max-width: 568px) {
+   section h2.bak-h2 {
+      padding: 0.3rem 1rem 0.3rem 1rem;
+   }
+   section.sec1 {
+      min-height: 100vh;
+      background-size: auto 100%;
+   }
+
+   section.sec1 .row {
+      width: 95%;
+   }
+   section.sec1 .tag-wrap span {
+      min-width: unset;
+      font-size: 0.8rem;
+      margin-right: 0.1rem;
+      padding: 0.3rem 0.6rem;
+   }
+   section.sec1 .goto-store a {
+      margin-right: 0.2rem;
+   }
+
+   section.sec1 h1 > i > img {
+      width: 70px;
+   }
+   section.sec1 .col-text > i > img {
+      width: 250px;
+   }
+   section.sec1 .goto-store img {
+      width: 130px;
+   }
+
+   section h2 {
+      font-size: 1.6rem;
+   }
+   section.sec2 h2 {
+      padding: 0;
+      line-height: 2.2rem;
+   }
+   section.sec2 h2 span {
+      font-size: 2rem;
+   }
+   section.sec2 ul.icon-list li {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 2rem;
+   }
+   section.sec3 .col-text img,
+   section.sec4 .col-text img,
+   section.sec5 .col-text img {
+      width: 60px;
+   }
+   .bak-gr {
+      height: 200px;
+   }
+   section.sec6 h2 {
+      line-height: 2.2rem;
+   }
+   section.sec6 h4 span {
+      font-size: 1.6rem;
+   }
+   section.sec6 h4 {
+      font-size: 1.2rem;
+   }
+   footer.footer b {
+      display: none;
+   }
+   footer.footer span {
+      display: block;
+   }
+   footer.footer .col-lg-5 > img {
+      width: 200px;
+   }
+   footer.footer .download img {
+      width: 140px;
+   }
+}
+
+@media (max-width: 320px) {
+   section.sec1 .row {
+      width: 98%;
+   }
+   section.sec1 .goto-store img,
+   footer.footer .download img {
+      width: 120px;
+   }
+   section.sec1 .tag-wrap {
+      width: 105%;
+   }
+   section.sec1 .tag-wrap span {
+      margin: 0;
+      border: 1px solid #289ca4;
+      letter-spacing: -1px;
+   }
+   section.sec2 h2 {
+      letter-spacing: -2px;
+      text-indent: -30px;
+   }
+   section.sec2 h2 span {
+      padding-left: 0rem;
+   }
+   footer.footer .footer-text p,
+   footer.footer .footer-text a {
+      font-size: 0.8rem;
+      line-height: 1.6rem;
+   }
+   footer.footer .row > article:last-of-type {
+      padding-left: 0.3rem;
+   }
+   footer.footer .goto-store > a {
+      margin-right: 2px;
    }
 }
